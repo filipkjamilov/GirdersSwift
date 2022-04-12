@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", exact: "1.7.0"),
-        .package(path: "Sources/Frameworks/PMKUIKit"),
+        .package(name: "PMKUIKit", path: "Sources/PMKUIKit"),
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", exact: "3.2.0"),
         .package(url: "https://github.com/AliSoftware/OHHTTPStubs.git", exact: "9.0.0"),
     ],
@@ -34,6 +34,6 @@ let package = Package(
                 .process("resources")
             ]
         ),
-        .binaryTarget(name: "GRSecurity", path: "Sources/Frameworks/GRSecurity.xcframework")
+        .binaryTarget(name: "GRSecurity", path: "Sources/GRSecurity.xcframework")
     ]
 )
